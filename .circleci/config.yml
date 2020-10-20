@@ -94,9 +94,9 @@ workflows:
       - test_regression_model
       - test_ml_api
       - train_and_upload_regression_model
+      - test_ml_api:
           requires:
-            - test_regression_model
-            - test_ml_api
+            - train_and_upload_regression_model
           # filters:
           #   branches:
           #     only:
